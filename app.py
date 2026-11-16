@@ -247,6 +247,14 @@ padding:.7rem 0 .6rem;border-bottom:1px solid var(--linea);margin-bottom:1rem;}
 .fila .d{color:var(--gris);font-size:.85rem;}
 .fila b{color:var(--texto);font-weight:600;}
 </style>
+/* pills de navegación: colores propios para que se lean en cualquier modo */
+.stApp [data-testid="stBaseButton-pills"]{background:var(--tarjeta);border:1px solid var(--linea);border-radius:99px;box-shadow:none;}
+.stApp [data-testid="stBaseButton-pills"],.stApp [data-testid="stBaseButton-pills"] p,.stApp [data-testid="stBaseButton-pills"] span,
+.stApp [data-testid="stBaseButton-pills"] div{color:var(--texto) !important;}
+.stApp [data-testid="stBaseButton-pills"]:hover{border-color:var(--azul);}
+.stApp [data-testid="stBaseButton-pillsActive"]{background:var(--azul);border:1px solid var(--azul);border-radius:99px;}
+.stApp [data-testid="stBaseButton-pillsActive"],.stApp [data-testid="stBaseButton-pillsActive"] p,.stApp [data-testid="stBaseButton-pillsActive"] span,
+.stApp [data-testid="stBaseButton-pillsActive"] div{color:#ffffff !important;}
 """
 
 

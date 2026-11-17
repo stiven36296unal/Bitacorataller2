@@ -27,12 +27,11 @@ MINIMO_SEMANA = 3
 
 ESPECIALES = {
     6: "Gráfica sencilla marcando qué debe coincidir para que haya continuidad. "
-       "Cierra con: «El valor del parámetro sale porque...»",
     7: "De secante a tangente: muestra qué representa el cociente incremental antes del límite.",
-    8: "Antes de derivar, leo la función: señala la estructura (producto, cociente, potencia...) "
-       "y cómo supiste qué regla usar.",
-    9: "Capas de una composición: separa función exterior e interior (esquema con flechas o colores).",
-    10: "Elegir la técnica: explica en 2–3 líneas por qué esa técnica y qué habría sido más incómodo.",
+    8: "Antes de derivar, leo la función: señalo la estructura (producto, cociente, potencia...) "
+       "y cómo supe qué regla usar.",
+    9: "Capas de una composición: separo función exterior e interior (esquema con flechas o colores).",
+    10: "Elegir la técnica: explico en 2–3 líneas por qué esa técnica y qué habría sido más incómodo.",
 }
 
 CODIGOS_ERROR = {

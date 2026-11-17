@@ -121,6 +121,112 @@ ENUNCIADOS = {
 for _e in ENTRADAS:
     _e["enunciado"] = ENUNCIADOS.get(_e["id"], "")
 
+def llenar(id, **campos):
+    for e in ENTRADAS:
+        if e["id"] == id:
+            e.update(campos)
+
+
+# ---------- Semana 6 ----------
+llenar(
+    "e01",
+    respuesta=r"La función no es continua en $x=1$, porque $f(1)=1$ y $\lim_{x\to 1}f(x)=\tfrac12$ no son iguales.",
+    regla="Usé el criterio de continuidad en un punto.",
+)
+llenar(
+    "e02",
+    respuesta=r"$f$ es discontinua en $x=4$.",
+    regla="Usé el criterio de la continuidad en un punto.",
+)
+llenar(
+    "e03",
+    respuesta=r"$c=\tfrac23$",
+    regla="El valor del parámetro sale porque igualé las dos expresiones reemplazando $x$ por 2, ya que ahí es donde las dos funciones tienen que «encajar».",
+)
+
+# ---------- Semana 7 ----------
+llenar(
+    "e04",
+    respuesta=r"$y=-8x+12$",
+    regla="Derivé la primera función, evalué en $x=2$ para hallar la pendiente y usé la ecuación punto-pendiente para hallar la ecuación de la recta.",
+)
+llenar(
+    "e05",
+    respuesta=r"$f'(x)=8-10x$. El dominio de $f$ y de $f'$ es $(-\infty,\infty)$.",
+    regla="Usé la definición de derivada. Como la derivada no tiene ninguna restricción de cociente o raíz, el dominio son los reales.",
+)
+llenar(
+    "e06",
+    respuesta=r"$v(4)=48\ \text{m/s}$ y $a(4)=10\ \text{m/s}^2$.",
+    regla="La derivada de la posición es la velocidad y la derivada de la velocidad es la aceleración; primero se deriva y después se evalúa.",
+)
+
+# ---------- Semana 8 ----------
+llenar(
+    "e07",
+    respuesta=r"$y'=3e^x-\dfrac{3}{2}x^{-3/2}$",
+    regla="Usé regla del producto y regla de la potencia.",
+)
+llenar(
+    "e08",
+    respuesta=r"$h'(r)=\dfrac{ab\,e^r}{(b+e^r)^2}$",
+    regla="Usé la regla del cociente y del producto; $a$ y $b$ actúan como constantes.",
+)
+llenar(
+    "e09",
+    respuesta=r"$f'(x)=e^x(\cos x-\sin x)$",
+    regla="Usé la regla del producto y factoricé $e^x$.",
+)
+llenar(
+    "e10",
+    respuesta=r"$j'(x)=-\dfrac{8}{(2x-3)^2}$",
+    regla="Usé la regla del cociente.",
+)
+
+# ---------- Semana 9 ----------
+llenar(
+    "e11",
+    respuesta=r"$y'=e^{\tan x}\sec^2 x$",
+    regla="Usé la regla de la cadena.",
+)
+llenar(
+    "e12",
+    respuesta=r"La respuesta final está en el último párrafo del procedimiento (ver foto).",
+    regla="Usé la regla de la cadena y la regla del producto para derivar lo de adentro de la cotangente.",
+)
+llenar(
+    "e13",
+    respuesta=r"La respuesta final está en el último párrafo del procedimiento (ver foto).",
+    regla="Usé derivación implícita porque no se puede despejar $y$, y luego despejé $y'$ para resolverlo.",
+)
+llenar(
+    "e14",
+    respuesta=r"$y'=2\cos(\tan 2x)\sec^2(2x)$",
+    regla="Usé la regla de la cadena dos veces para derivar ambas funciones trigonométricas.",
+)
+
+# ---------- Semana 10 ----------
+llenar(
+    "e15",
+    respuesta=r"$y'=\dfrac{1}{\sqrt{-x^2-x}}$",
+    regla="Usé la derivada de $\\sin^{-1}$ que el profe mostró en clase y reemplacé.",
+)
+llenar(
+    "e16",
+    respuesta=r"$t'(x)=\dfrac{2x^2-1}{x(x^2-1)}$",
+    regla="Antes de derivar separé cada término usando la regla del logaritmo de un producto y para bajar los exponentes.",
+)
+llenar(
+    "e17",
+    respuesta=r"$y'=x^x(\ln x+1)$",
+    regla="Usé derivación logarítmica, ya que fue la forma que enseñó el profe.",
+)
+llenar(
+    "e18",
+    respuesta=r"La respuesta final está en el último párrafo del procedimiento (ver foto).",
+    regla="Usé derivación logarítmica, ya que hay demasiadas funciones y usar las reglas normales tomaría demasiado tiempo y espacio; tomando el logaritmo de cada cosa es mucho más corto.",
+)
+
 # Ejemplo de cómo se llena una entrada (bórralo cuando hagas la tuya):
 # ENTRADAS[0].update(
 #     ref="[S] Sec. 2.5, ej. 19",
@@ -138,10 +244,25 @@ PREGUNTAS_PAUSA = [
     "¿Qué ejercicio debo repetir y por qué?",
     "¿Qué ya puedo explicar sin mirar?",
 ]
-PAUSAS = {  # escribe tus respuestas en el mismo orden de PREGUNTAS_PAUSA
-    6: ["", "", "", ""],
-    12: ["", "", "", ""],
-    18: ["", "", "", ""],
+PAUSAS = {
+    6: [
+        r"La definición de la derivada.",
+        r"Errores con los signos al despejar.",
+        r"El de la definición, ya que va a salir uno en el parcial.",
+        r"Cómo hallar una recta tangente en un punto.",
+    ],
+    12: [
+        r"La regla de la cadena.",
+        r"Al usar la regla de la cadena en una función trigonométrica se deriva también lo de adentro de ella.",
+        r"El 12, porque usa varias reglas y ese tema sale en el parcial.",
+        r"Regla de la potencia y del cociente.",
+    ],
+    18: [
+        r"La derivación logarítmica.",
+        r"Tomar un camino largo cuando se puede hacer uno corto usando derivación logarítmica.",
+        r"El 18, ya que es un buen uso de la derivación logarítmica.",
+        r"Cómo se aplica la derivación logarítmica.",
+    ],
 }
 PREGUNTAS_CIERRE = [
     "La regla que mejor manejo ahora es...",
@@ -149,7 +270,12 @@ PREGUNTAS_CIERRE = [
     "El ejercicio que volveré a resolver antes del parcial es...",
     "Cuando veo una función nueva, lo primero que miro es...",
 ]
-CIERRE = ["", "", "", ""]
+CIERRE = [
+    r"La derivación implícita y logarítmica.",
+    r"Usar bien las reglas y planear antes de resolver.",
+    r"Los ejercicios 17 y 18.",
+    r"Qué reglas son necesarias para derivar.",
+]
 CITA = ("Resolver bien no es hacer muchos ejercicios. Es aprender a reconocer qué hacer, "
         "revisar lo que salió mal y poder intentarlo de nuevo.")
 

@@ -26,7 +26,7 @@ SEMANAS = {
 MINIMO_SEMANA = 3
 
 ESPECIALES = {
-    6: "Gráfica sencilla marcando qué debe coincidir para que haya continuidad. "
+    6: "Gráfica sencilla marcando qué debe coincidir para que haya continuidad. ",
     7: "De secante a tangente: muestra qué representa el cociente incremental antes del límite.",
     8: "Antes de derivar, leo la función: señalo la estructura (producto, cociente, potencia...) "
        "y cómo supe qué regla usar.",

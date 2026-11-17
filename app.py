@@ -184,30 +184,7 @@ body,
 .stApp h4 {
     color: #1f2937;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-:root{--azul:#0071e3;--texto:#1d1d1f;--gris:#6e6e73;--fondo:#f5f5f7;--tarjeta:#ffffff;--hueco:#fafafc;
---linea:rgba(0,0,0,.08);--seg:rgba(0,0,0,.055);--seg-sel:#ffffff;--seg-sombra:0 1px 3px rgba(0,0,0,.14);
---barra:rgba(0,0,0,.08);--codigo:rgba(0,0,0,.06);--borde-drop:rgba(0,0,0,.18);--pend:#a1a1a6;
---sombra:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--sombra-img:0 2px 12px rgba(0,0,0,.10);
---chip-azul-bg:rgba(0,113,227,.12);--chip-azul:#0071e3;--chip-verde-bg:rgba(52,199,89,.16);--chip-verde:#1f8a3b;
---chip-gris-bg:rgba(0,0,0,.06);--chip-naranja-bg:rgba(255,149,0,.16);--chip-naranja:#b35c00;color-scheme:light;}
-@media (prefers-color-scheme: dark){:root{--azul:#0a84ff;--texto:#f5f5f7;--gris:#98989d;--fondo:#000000;--tarjeta:#1c1c1e;--hueco:#111113;
---linea:rgba(255,255,255,.12);--seg:rgba(255,255,255,.10);--seg-sel:#3a3a3c;--seg-sombra:0 1px 3px rgba(0,0,0,.5);
---barra:rgba(255,255,255,.14);--codigo:rgba(255,255,255,.12);--borde-drop:rgba(255,255,255,.22);--pend:#6e6e73;
---sombra:0 0 0 1px rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.5);--sombra-img:0 2px 12px rgba(0,0,0,.6);
---chip-azul-bg:rgba(10,132,255,.22);--chip-azul:#64a9ff;--chip-verde-bg:rgba(48,209,88,.22);--chip-verde:#30d158;
---chip-gris-bg:rgba(255,255,255,.10);--chip-naranja-bg:rgba(255,159,10,.22);--chip-naranja:#ff9f0a;color-scheme:dark;}}
-.stApp{background:var(--fondo);color:var(--texto);}
-.stApp,.stApp p,.stApp li,.stApp label,.stApp button,.stApp h1,.stApp h2,.stApp h3,.stApp h4{
-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Helvetica Neue",Arial,sans-serif;
--webkit-font-smoothing:antialiased;}
-.stApp p,.stApp li,.stApp label,.stApp h1,.stApp h2,.stApp h3,.stApp h4,.stApp [data-testid="stMarkdownContainer"]{color:var(--texto);}
-.stApp code{background:var(--codigo);color:var(--texto);}
-header[data-testid="stHeader"]{display:none;}
-footer,#MainMenu{visibility:hidden;}
-.block-container{max-width:880px;padding-top:2rem;padding-bottom:5rem;}
-hr{border-color:var(--linea);}
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
 
 /* tipografía */
 .eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);}

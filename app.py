@@ -11,9 +11,9 @@ IMG = BASE / "imagenes"
 EXT = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
 # ─────────────────────────── DATOS PERSONALES ───────────────────────────
-NOMBRE = "Jhoan Stiven Muñoz Barbosa"
-GRUPO = "27"
-FECHA = "16/11/2026"
+NOMBRE = "Stiven TU_APELLIDO"
+GRUPO = "21"
+FECHA = "DD/MM/2026"
 
 # ─────────────────────────── ESTRUCTURA DEL CORTE ───────────────────────
 SEMANAS = {
@@ -47,7 +47,6 @@ CODIGOS_ERROR = {
 
 # ─────────────────────────── ENTRADAS ───────────────────────────────────
 # Cada entrada tiene un id (e01, e02...). Las imágenes se buscan por id:
-#   imagenes/e01_intento.jpg
 #   imagenes/e01_procedimiento.jpg   (o e01_procedimiento_2.jpg, _3... para varias páginas)
 #   imagenes/e01_especial.jpg        (solo entradas especiales ⭐)
 #   imagenes/e01_error.jpg           (solo si registras un error: tu intento con el error marcado)
@@ -158,33 +157,30 @@ CITA = ("Resolver bien no es hacer muchos ejercicios. Es aprender a reconocer qu
 # ─────────────────────────── ESTILO (inspirado en Apple) ────────────────
 CSS = """
 <style>
-:root {
-    color-scheme: light !important;
-    --background-color: #ffffff;
-    --text-color: #1f2937;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--azul:#0071e3;--texto:#1d1d1f;--gris:#6e6e73;--fondo:#f5f5f7;--tarjeta:#ffffff;--hueco:#fafafc;
+--linea:rgba(0,0,0,.08);--seg:rgba(0,0,0,.055);--seg-sel:#ffffff;--seg-sombra:0 1px 3px rgba(0,0,0,.14);
+--barra:rgba(0,0,0,.08);--codigo:rgba(0,0,0,.06);--borde-drop:rgba(0,0,0,.18);--pend:#a1a1a6;
+--sombra:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--sombra-img:0 2px 12px rgba(0,0,0,.10);
+--chip-azul-bg:rgba(0,113,227,.12);--chip-azul:#0071e3;--chip-verde-bg:rgba(52,199,89,.16);--chip-verde:#1f8a3b;
+--chip-gris-bg:rgba(0,0,0,.06);--chip-naranja-bg:rgba(255,149,0,.16);--chip-naranja:#b35c00;color-scheme:light;}
+@media (prefers-color-scheme: dark){:root{--azul:#0a84ff;--texto:#f5f5f7;--gris:#98989d;--fondo:#000000;--tarjeta:#1c1c1e;--hueco:#111113;
+--linea:rgba(255,255,255,.12);--seg:rgba(255,255,255,.10);--seg-sel:#3a3a3c;--seg-sombra:0 1px 3px rgba(0,0,0,.5);
+--barra:rgba(255,255,255,.14);--codigo:rgba(255,255,255,.12);--borde-drop:rgba(255,255,255,.22);--pend:#6e6e73;
+--sombra:0 0 0 1px rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.5);--sombra-img:0 2px 12px rgba(0,0,0,.6);
+--chip-azul-bg:rgba(10,132,255,.22);--chip-azul:#64a9ff;--chip-verde-bg:rgba(48,209,88,.22);--chip-verde:#30d158;
+--chip-gris-bg:rgba(255,255,255,.10);--chip-naranja-bg:rgba(255,159,10,.22);--chip-naranja:#ff9f0a;color-scheme:dark;}}
+.stApp{background:var(--fondo);color:var(--texto);}
+.stApp,.stApp p,.stApp li,.stApp label,.stApp button,.stApp h1,.stApp h2,.stApp h3,.stApp h4{
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Helvetica Neue",Arial,sans-serif;
+-webkit-font-smoothing:antialiased;}
+.stApp p,.stApp li,.stApp label,.stApp h1,.stApp h2,.stApp h3,.stApp h4,.stApp [data-testid="stMarkdownContainer"]{color:var(--texto);}
+.stApp code{background:var(--codigo);color:var(--texto);}
+header[data-testid="stHeader"]{display:none;}
+footer,#MainMenu{visibility:hidden;}
+.block-container{max-width:880px;padding-top:2rem;padding-bottom:5rem;}
+hr{border-color:var(--linea);}
 
-html,
-body,
-.stApp,
-[data-testid="stAppViewContainer"],
-[data-testid="stHeader"],
-[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    color: #1f2937 !important;
-}
-
-.stApp,
-.stApp p,
-.stApp span,
-.stApp label,
-.stApp h1,
-.stApp h2,
-.stApp h3,
-.stApp h4 {
-    color: #1f2937;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
 
 /* tipografía */
 .eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);}
@@ -250,13 +246,13 @@ padding:.7rem 0 .6rem;border-bottom:1px solid var(--linea);margin-bottom:1rem;}
 .fila .d{color:var(--gris);font-size:.85rem;}
 .fila b{color:var(--texto);font-weight:600;}
 /* pills de navegación: colores propios para que se lean en cualquier modo */
-.stApp [data-testid="stBaseButton-pills"]{background:var(--tarjeta);border:1px solid var(--linea);border-radius:99px;box-shadow:none;}
-.stApp [data-testid="stBaseButton-pills"],.stApp [data-testid="stBaseButton-pills"] p,.stApp [data-testid="stBaseButton-pills"] span,
-.stApp [data-testid="stBaseButton-pills"] div{color:var(--texto) !important;}
-.stApp [data-testid="stBaseButton-pills"]:hover{border-color:var(--azul);}
-.stApp [data-testid="stBaseButton-pillsActive"]{background:var(--azul);border:1px solid var(--azul);border-radius:99px;}
-.stApp [data-testid="stBaseButton-pillsActive"],.stApp [data-testid="stBaseButton-pillsActive"] p,.stApp [data-testid="stBaseButton-pillsActive"] span,
-.stApp [data-testid="stBaseButton-pillsActive"] div{color:#ffffff !important;}
+.stApp button[data-variant="pills"]{background:var(--tarjeta);border:1px solid var(--linea);border-radius:99px;box-shadow:none;}
+.stApp button[data-variant="pills"],.stApp button[data-variant="pills"] p,.stApp button[data-variant="pills"] span,
+.stApp button[data-variant="pills"] div{color:var(--texto) !important;}
+.stApp button[data-variant="pills"]:hover{border-color:var(--azul);}
+.stApp button[data-variant="pills"][aria-checked="true"]{background:var(--azul);border-color:var(--azul);}
+.stApp button[data-variant="pills"][aria-checked="true"],.stApp button[data-variant="pills"][aria-checked="true"] p,
+.stApp button[data-variant="pills"][aria-checked="true"] span,.stApp button[data-variant="pills"][aria-checked="true"] div{color:#ffffff !important;}
 </style>
 """
 
@@ -382,18 +378,15 @@ def mostrar_entrada(e):
             html('<div class="eyebrow" style="margin:.8rem 0 .3rem">Enunciado</div>')
             st.markdown(e["enunciado"])
 
-        paso(2, "Intento", "antes de mirar ayuda")
-        mostrar_imagenes(f"{e['id']}_intento", "Foto de tu primer intento")
-
-        paso(3, "Procedimiento")
+        paso(2, "Procedimiento")
         if e["proc"]:
             st.markdown(e["proc"])
         mostrar_imagenes(f"{e['id']}_procedimiento", "Foto del procedimiento")
 
-        paso(4, "Respuesta")
+        paso(3, "Respuesta")
         texto_o_pendiente(e["respuesta"])
 
-        paso(5, "Nota breve", "¿qué regla usé y por qué?")
+        paso(4, "Nota breve", "¿qué regla usé y por qué?")
         texto_o_pendiente(e["regla"])
 
         if e["especial"]:

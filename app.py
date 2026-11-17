@@ -11,9 +11,9 @@ IMG = BASE / "imagenes"
 EXT = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
 # ─────────────────────────── DATOS PERSONALES ───────────────────────────
-NOMBRE = "Stiven TU_APELLIDO"
-GRUPO = "21"
-FECHA = "DD/MM/2026"
+NOMBRE = "Jhoan Stiven Muñoz Barbosa"
+GRUPO = "27"
+FECHA = "16/11/2026"
 
 # ─────────────────────────── ESTRUCTURA DEL CORTE ───────────────────────
 SEMANAS = {
